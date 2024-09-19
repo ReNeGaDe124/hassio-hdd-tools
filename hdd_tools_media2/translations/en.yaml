@@ -1,0 +1,40 @@
+configuration:
+  sensor_state_type:
+    name: Sensor type
+    description: Sensor value to expose to Home Assistant, can be 'temperature' or 'smart_state'
+  sensor_name:
+    name: Name of the sensor
+    description: Name for the sensor which is exposed to Home Assistant
+  friendly_name:
+    name: Friendly name
+    description: Friendly name for the sensor which is exposed to Home Assistant
+  hdd_path:
+    name: Path of HDD
+    description: Path to drive to monitor
+  device_type:
+    name: Device type
+    description: Type of block device which 'smartctl' will try to use for communication. Default 'auto'. Check https://www.smartmontools.org/wiki/USB
+  attributes_format:
+    name: Format of the attributes
+    description:  One of 'object' or 'list'. More details in the Documentation tab.
+  attributes_property:
+    name: Attributes property
+    description: Attribute you want to merge with the attributes in your sensor. Check the output file for the available properties
+  check_period:
+    name: Check period (minutes)
+    description: Interval in minutes / how often to read temperature
+  database_update:
+    name: Update drives database
+    description: Flag to enable the update of the smartmontools drives database
+  database_update_period:
+    name: Drives database update period (hours) 
+    description: Interval in hours / how often the drive database is updated
+  performance_check:
+    name: Performance check
+    description: Flag to enable or disable the execution of performance check at startup
+  debug:
+    name: Debug
+    description: Flag to enable or disable debugging. Activate this if you want to debug which property from the JSON output of smartctl you want to be merged to the sensor
+  output_file:
+    name: Output file
+    description: Log file 
